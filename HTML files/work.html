@@ -1,0 +1,168 @@
+<html>
+    <head>
+        <title> Work Experience | Extra Curricular Activities </title>
+        <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+                <style>
+                     .column {
+                     float: left;
+                     width:250px;
+                     font-family: 'Times New Roman', Times, serif;
+                     font-size: 20px;
+                    }
+
+                    .column2 {
+                     float: left;
+                     width:150px;
+                     font-family: 'Times New Roman', Times, serif;
+                     font-size: 20px;
+                     align
+                     }
+
+                    .row {
+                        content: "";
+                        display: table;
+                        clear: both;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size: 20px;
+                        width: 500px;
+                    }
+
+                    .header, .footer {
+                        width: 100%;
+                        position: fixed;        
+                        background: #333;
+                        padding: 10px;
+                        color:green;
+                    }
+
+                    .header {
+                        top: 0;
+                    }
+
+                    .footer {
+                        bottom: 0;
+                    }
+
+                    .text {
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size: 20px;
+                        text-align: left;
+                    }
+
+                    .publication_title {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        color: midnightblue;
+                        font-size: 25px;
+                        text-align: left;
+                    }
+
+                    .bdy {
+                        background-image:url(http://getwallpapers.com/wallpaper/full/1/d/a/165821.jpg)
+                    }
+
+                </style>
+    </head>
+
+    <body >
+        <!-- Header Begins -->
+        <header>
+                <table   cellspacing='5' >
+                            <tr>
+                            <td> <img src="F:\FY19 Project\Photos\logo.gif" height="120px" width="120px">  </td>
+                            <td bgcolor="green" width="100%" height="" align="center"  > <font style="Times New Roman" size="6" color="white"> Government College Of Engineering, Amravati </font> <br/>
+                                <font style="Times New Roman" size="5" color="white"> Near kathora square, Amravati - 444604 </font><br/>
+                                <font style="Times New Roman" size="4" color="white">  (An Autonomous Institute Of Government Of Maharashtra) </font> <br/>  </td>
+                            </tr>
+                            </table>
+                        </header>
+        <!-- Header Ends Here -->
+        <div style="padding-top: 50px"></div>
+
+        <div id="paper">
+                <center> <div style="width:1000px;height: auto;border:2px solid #000;backface-visibility: visible; background-color:cornsilk"> 
+                     <p align="center"> <font style="Times New Roman" size="6" color="brown"> <b> Update Publications </b> </font> </p>
+                     <hr style="border:1.2px solid black">
+
+
+        <form action="#" method="POST">
+            <!-- Work Begin -->
+            <div class="publication_title">
+                    <ul>
+                    <li>Work Description</li>
+                </ul>
+            </div>
+
+           <div class="row">
+               <div class="column">
+               <label class="text" ><div align="left"> Enter Work Desciption: </div></label>
+            </div>
+            <div class="column2">
+                <textarea name="work_desc" placeholder="Work Description" rows="5" cols="60"></textarea>
+            </div>
+            </div>
+            
+                                    <div style="padding: 5px"></div>
+
+                                <div class="row">
+                                    <div class="column1">
+                                        <button type="button" name="Add New" value="add"> Add New </button> 
+                                    </div>
+                                </div>
+        <!-- Work End -->
+
+
+        <!-- Extra Curricular -->
+        <div class="publication_title">
+                <ul>
+                <li>Extra Curricular/Co-Curricular Activities</li>
+            </ul>
+        </div>
+
+       <div class="row">
+           <div class="column">
+           <label class="text" ><div align="left"> Enter Work Desciption: </div></label>
+        </div>
+        <div class="column2">
+            <textarea name="eca_desc" placeholder="Work Description" rows="5" cols="60"></textarea>
+        </div>
+        </div>
+        
+                                <div style="padding: 5px"></div>
+
+                            <div class="row">
+                                <div class="column1">
+                                    <button type="button" name="Add New" value="add"> Add New </button> 
+                                </div>
+                            </div>
+
+        </form>
+
+</div>
+=
+        <div style="padding-bottom: 100px"></div>
+
+        <!-- Footer Begins -->
+<footer class="footer">
+        <table   cellspacing='5' >
+                <tr>
+                <td bgcolor="green" width="1590px" height="50px" align="center"  > <font style="Times New Roman" size="6" color="white"> Developed By GCOEA </font> <br/>
+                </td>
+                </tr>
+                </table>
+            </footer>
+<!-- Footer Ends Here -->
+
+<div class="footer">
+    <div class=""></div>
+</div>
+
+<script>
+    new Vue({
+        el:"#paper",
+        data:{
+
+        }
+    });
+</script>
+    </body>
+</html>

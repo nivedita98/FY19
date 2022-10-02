@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Patents | Research and development Cell | Government College of Engineering, Amravati.</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<h1 class="text-white text-center font-weight-bold bg-success" style="font-size: 60px;"> Patents </h1>
+
+	<div class="container"><br>
+		<div class="col-lg-8 m-auto d-block">
+			
+			<form action="#" onsubmit="return validation()" style="background-color: rgb(244, 246, 246);">
+				<div style="padding-top: 30px;"></div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="patent" class="font-weight-bold">Patent Title: </label>
+					<input type="text" name="Patent_title" class="form-control" id="pat_title" autocomplete="off">
+					<span id="patent_title" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold">Department of Research Work:</label>
+                    <select class="form-control" id="sel1" name="department_of_work">
+                    <option value="Computer Science And Engineering">Computer Science And Engineering</option>
+    				<option value="Information Technology">Information Technology</option>
+    				<option value="Instrumentation Engineering">Instrumentation Engineering</option>
+    				<option value="Electronics And Telecommunication Engineering">Electronics And Telecommunication Engineering</option>
+    				<option value="Electrical Engineering<">Electrical Engineering</option>
+    				<option value="Civil Engineering">Civil Engineering</option>
+    				<option value="Mechanical Engineering">Mechanical Engineering</option>
+  					</select>
+				</div>
+					<span id="work" class="text-danger font-weight-bold"></span>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="patent_no" class="font-weight-bold">  Patent Number: </label>
+					<input type="text" name="user" class="form-control" id="pat_no" name="Patent_number" autocomplete="off">
+					<span id="patent_number" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Date Of Publishing: </label>
+					<input type="date" name="Publishing_date" required>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold">Patent Type:</label>
+                    <select class="form-control" id="sel1" name="Patent_type">
+                    <option value="Product Based">Product Based</option>
+    				<option value="Process Based">Process Based</option>
+  					</select>
+				</div>
+					<span id="work" class="text-danger font-weight-bold"></span>
+
+					<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Patent Registered?  </label>
+					<div class="radio">
+                    <label><input type="radio" name="registery" >Yes</label>
+                     </div>
+                   <div class="radio">
+                        <label><input type="radio" name="registery">No</label>
+                     </div>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Nationally/Internationally Commercialized?  </label>
+					<div class="radio">
+                    <label><input type="radio" name="commercialization" >Yes</label>
+                     </div>
+                   <div class="radio">
+                        <label><input type="radio" name="commercialization">No</label>
+                     </div>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="inv" class="font-weight-bold">  Investment(INR): </label>
+					<input type="text" name="user" class="form-control" id="invest" autocomplete="off" name="Investment">
+					<span id="investment" class="text-danger font-weight-bold"> </span>
+				</div>
+
+					<span id="work" class="text-danger font-weight-bold"></span>
+
+				<div class="text-center">
+				<div class="col-lg-12 col-md-12 text-center">
+                    <input type="submit" name="submit" class="btn btn-primary btn-lg custom-btn" >
+                </div>
+
+                	<div style="padding-top: 40px;"></div>
+            </div>
+				</form>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--JAVASCRIPT-->
+	<script type="text/javascript">
+		
+
+		function validation(){
+
+			var pat_title = document.getElementById('pat_title').value;
+			var pat_no = document.getElementById('pat_no').value;
+			var invest = document.getElementById('invest').value;
+
+
+
+
+
+			if(pat_title == ""){
+				document.getElementById('patent_title').innerHTML =" ** Please fill the First name field";
+				return false;
+			}
+			if((pat_title.length <= 2) || (pat_title.length > 50)) {
+				document.getElementById('patent_title').innerHTML =" **Lenght must be between 2 and 50";
+				return false;	
+			}
+
+
+			if(pat_no == ""){
+				document.getElementById('patent_number').innerHTML =" ** Please fill the Middle name field";
+				return false;
+			}
+			if((pat_no.length <= 2) || (pat_no.length > 20)) {
+				document.getElementById('patent_number').innerHTML =" ** lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(pat_no)){
+				document.getElementById('patent_number').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+		
+
+			if(invest == ""){
+				document.getElementById('investment').innerHTML =" **Please fill the Investment field (Enter 0 if not Funded)";
+				return false;
+			}
+			if(isNaN(invest)){
+				document.getElementById('investment').innerHTML =" **Enter the Innvestment Amount ";
+				return false;
+			}
+		}
+	</script>
+
+<!--JAVASCRIPT-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+
+<!--PHP -->
+<?php 
+$Patent_title = filter_input(INPUT_POST, 'Patent_title');
+$department_of_work = filter_input(INPUT_POST, 'department_of_work');
+$Patent_number = filter_input(INPUT_POST, 'Patent_number');
+$Publishing_date = filter_input(INPUT_POST, 'Publishing_date');
+$Patent_type = filter_input(INPUT_POST, 'Patent_type');
+$registery = filter_input(INPUT_POST, 'registery');
+$commercialization = filter_input(INPUT_POST, 'commercialization');
+$Investment = filter_input(INPUT_POST, 'Investment');
+
+
+if(!empty($Patent_title) && !empty($department_of_work) && !empty($Patent_number) && !empty($Publishing_date) && !empty($Patent_type) && !empty($registery) && !empty($commercialization) && !empty($Investment)){
+
+		$host = "localhost";
+		$dbusername = "root";
+		$dbpassword = "";
+		$dbname = "test";
+
+		//connection
+		$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+
+		if (mysqli_connect_error()){
+			die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+		}
+		else{
+			$sql = "INSERT INTO contact (Patent_title, department_of_work, Patent_number, Publishing_date, Patent_type, registery, commercialization, Investment) values ('$Patent_title','$department_of_work', '$Patent_number', '$Publishing_date', '$Patent_type', '$registery', '$commercialization','$Investment')";
+
+			if ($conn->query($sql)) {
+			echo '<span style="color:#FF0000;text-align:center;">Details Saved</span>';
+		}
+			else{
+				echo "Error: ".$sql ."<br>" .$conn->error;
+			}
+			$conn->close();
+		}
+}
+?>

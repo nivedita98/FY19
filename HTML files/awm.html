@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <style>
+            body {background-color:powderblue;}
+            div1 { font-family: 'Courier New', Courier, monospace;font-style: oblique; color: crimson; alig }
+            div2 { font-family: 'Courier New', Courier, monospace;font-style: oblique; color:blueviolet; }
+
+            .column {
+    float: left;
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+        </style>
+    </head>
+    <body>
+        <div class="heading">
+            <div1> Heading Lies Here </div1>
+        </div>
+            <form action="#" method="POST">
+
+
+
+                <div class="row">
+                    <div class="column">
+                        <label class="text"> First Name </label>
+                        <div class="fk">
+                            <i class="fa user" aria-hidden="true"></i>
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <label class="text"> Emai id </label>
+                        <div class="fk2">
+                            <i class="fa email" aria-hidden="true"></i>
+                            <input type="text" name="email" placeholder="Enter Email id">
+                            </div>     
+                    </div>
+                    </div>
+
+
+
+
+                    <div class="row">
+                        <div clas="column">
+                            <label class="text"> Password </label>
+                            <div class="fk">
+                                    <i class="fa user" aria-hidden="true"></i>
+                                <input type="password" name="password" placeholder="Enter Password" required>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <label class="text"> Date of Birth </label>
+                            <div class="fk2">
+                                    <i class="fa email" aria-hidden="true"></i>
+                                <input type="date">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+    </body>
+</html>

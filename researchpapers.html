@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Research Papers | Research and development Cell | Government College of Engineering, Amravati.</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<h1 class="text-white text-center font-weight-bold bg-success" style="font-size: 60px;"> Research Papers </h1>
+
+	<div class="container"><br>
+		<div class="col-lg-8 m-auto d-block">
+			
+			<form action="#" onsubmit="return validation()" style="background-color: rgb(244, 246, 246);">
+				<div style="padding-top: 30px;"></div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="title" class="font-weight-bold"> Research Paper Title: </label>
+					<input type="text" name="Paper_title" class="form-control" id="res_pap_title" autocomplete="off">
+					<span id="research_paper_title" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="at_name" class="font-weight-bold"> Author Name: </label>
+					<input type="text" name="Author_name" class="form-control" id="athr_name" autocomplete="off">
+					<span id="author_name" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Date Of Publishing: </label>
+					<input type="date" name="Date_of_publishing" required>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold">Author Status :</label>
+  <select class="form-control" id="sel1" name="Author_status">
+    <option value="PhD Holder">PhD Holder</option>
+    <option value="Non PhD">Non PhD</option>
+  </select>
+</div>
+					<span id="work" class="text-danger font-weight-bold"></span>
+
+				<div class="text-center">
+				<div class="col-lg-12 col-md-12 text-center">
+                    <input type="submit" name="submit" class="btn btn-primary btn-lg custom-btn" >
+                </div>
+                <div style="padding-top: 40px;"></div>
+            </div>
+				</form>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--JAVASCRIPT-->
+	<script type="text/javascript">
+		
+
+		function validation(){
+
+			var res_pap_title = document.getElementById('res_pap_title').value;
+			var athr_name = document.getElementById('athr_name').value;
+
+
+
+
+			if(res_pap_title == ""){
+				document.getElementById('research_paper_title').innerHTML =" **Please enter the title of research paper";
+				return false;
+			}
+			if((res_pap_title.length <= 2) || (res_pap_title.length > 20)) {
+				document.getElementById('research_paper_title').innerHTML =" **Lenght must be between 2 and 20";
+				return false;	
+			}
+
+
+			if(athr_name == ""){
+				document.getElementById('author_name').innerHTML =" **Please fill the Auhtor name field";
+				return false;
+			}
+			if((athr_name.length <= 2) || (athr_name.length > 20)) {
+				document.getElementById('author_name').innerHTML =" **Lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(athr_name)){
+				document.getElementById('author_name').innerHTML =" **Only characters are allowed";
+				return false;
+			}
+
+		}
+	</script>
+
+<!--JAVASCRIPT-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+<!--PHP -->
+<?php 
+$Paper_title = filter_input(INPUT_POST, 'Paper_title');
+$Author_name = filter_input(INPUT_POST, 'Author_name');
+$Date_of_publishing = filter_input(INPUT_POST, 'Date_of_publishing');
+$Author_status = filter_input(INPUT_POST, 'Author_status');
+
+if(!empty($Paper_title) && !empty($Author_name) && !empty($Date_of_publishing) && !empty($Author_status)){
+
+		$host = "localhost";
+		$dbusername = "root";
+		$dbpassword = "";
+		$dbname = "test";
+
+		//connection
+		$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+
+		if (mysqli_connect_error()){
+			die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+		}
+		else{
+			$sql = "INSERT INTO contact (Paper_title, Author_name, Date_of_publishing, Author_status) values ('$Paper_title','$Author_name', '$Date_of_publishing', '$Author_status')";
+
+			if ($conn->query($sql)) {
+			echo '<span style="color:#FF0000;text-align:center;">Details Saved</span>';
+		}
+			else{
+				echo "Error: ".$sql ."<br>" .$conn->error;
+			}
+			$conn->close();
+		}
+}
+?>

@@ -1,0 +1,115 @@
+
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+        <title> Profile Update </title>
+    </head>
+
+    <body>
+
+<!-- Header Begins -->
+<header>
+        <table cellspacing='5' >
+                    <tr>
+                    <td> <img src="F:\FY19 Project\Photos\logo.gif" height="120px" width="120px">  </td>
+                    <td bgcolor="green" width="100%" height="" align="center"  > <font style="Times New Roman" size="6" color="white"> Government College Of Engineering, Amravati </font> <br/>
+                        <font style="Times New Roman" size="5" color="white"> Near kathora square, Amravati - 444604 </font><br/>
+                        <font style="Times New Roman" size="4" color="white">  An Autonomous Institute Of Government Of Maharashtra </font> <br/>  </td>
+                    </tr>
+                    </table>
+                </header>
+
+<div style="padding-top:50px"></div>
+
+<!-- Header Ends Here -->
+        <div id="Update_Profile">
+           <center> <div style="width:800px;height:auto;border:2px solid #000;background-color:linen;"> 
+                <p align="center"> <font style="Times New Roman" size="5" color="brown"> <b> Edit Your Profile </b> </font> </p>
+                <p align="center"> Fill out the form below to update your profile. Fields marked with <font color="red"> * </font> are required. </p> 
+                <hr style="border:1.2px solid black">
+<!-- Table Starts here -->
+            <table > 
+                <tr> <td> Profile Photo </td> <td> <form>  
+                        <input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)">
+                        <label for="file" style="cursor: pointer;"> </label>
+                        <img id="output" width="150" />        
+                </form> </td> </tr>
+                <tr> <td> First Name : </td> <td> <input type="text" title="Enter First Name" placeholder="First Name" > <font color="red"> * </font> </td> </tr> <tr><td></td></tr>
+                <tr> <td> Middle Name : </td> <td> <input type="text" title="Enter Middle Name" placeholder="Middle Name" > </td> </tr> <tr><td></td></tr>
+                <tr> <td> Last Name :</td> <td> <input type="text" title="Enter Last Name" placeholder="Last Name" > <font color="red"> * </font> </td> </tr> <tr><td></td></tr>
+                <tr> <td> Gender : </td> <td> <input type="radio" value="Male" name="gender"> Male  <input type="radio" value="Female" name="gender"> Female <input type="radio" value="Others" name="gender"> Others </td> </tr> <tr><td></td></tr>
+                <tr> <td> Date Of Birth : </td> <td> <input type="date"> </td> </tr> <tr><td></td></tr>
+                <tr> <td> E-mail Address : </td> <td> <input type="text" title="Enter E-mail Address" placeholder="E-mail address" > <font color="red"> * </font> </td> </tr> 
+                <tr> <td> Date Of Joining Institute : </td> <td> <input type="date"> </td> </tr> <tr><td></td></tr>
+                <tr> <td> Work Experience : </td> <td> <input type="text" title="Enter Your Work Experience" placeholder="Work Experience" > </td> </tr> <tr><td></td></tr>
+                <tr> <td> Are you a Recognized PhD ? </td> <td> <input type="radio" value="Yes" name="phd"> Yes <input type="radio" value="No" name="phd"> No </td> </tr> <tr><td></td></tr>
+                <tr> <td> Department : </td> <td>  
+                        <select name="Department" >
+                        <option> Select Department </option>
+                        <option> Computer Science And Engineering </option>
+                        <option> Information Technology </option>
+                        <option> Instrumentation Engineering </option>
+                        <option> Electronics And Telecommunication Engineering </option>
+                        <option> Electrical And Power Engineering </option>
+                        <option> Mechanical Engineering </option>
+                        <option> Civil Engineering </option> 
+                     </td>
+                    <td> <font color="red"> * </font> </td> </tr>
+                <tr> <td><br/> Designation : </td> <td> <br/><input type="text" title="Enter Designation" placeholder="Enter Your Designation"> </td> </tr> <tr><td></td></tr>
+                <tr> <td> Office Phone No. : </td> <td> <input type="text" title="Enter Office Phone Number" placeholder="Office Phone Number"> </td> </tr> <tr><td></td></tr>
+                <tr> <td> E-mail Address : </td> <td> <input type="text" title="Enter E-mail Address" placeholder="E-mail address" > <font color="red"> * </font> </td> </tr> 
+                <tr> <td> Mobile No. : </td> <td> <input type="text" title="Enter Mobile Number" placeholder="Mobile Number"> </td></tr>  <tr><td></td></tr>
+                <tr> <td> Address : </td> <td> <textarea name="Address" rows="5" placeholder="Enter Address"></textarea > </td> </tr> <tr><td></td></tr>
+
+
+
+            </table>
+            <br/>
+            <br/>
+            <br/>
+            <button type="button" name="Save Profile"> Save Profile </button><br/><br/>
+            NOTE: <font color="red" size="2">You can anytime update your profile later </font>
+            <div style="padding: 3px"></div>
+        </center>
+        </div>
+        </div>
+
+        <div style="padding-bottom:110px"></div>
+
+        <script>
+                var loadFile = function(event) {
+                    var image = document.getElementById('output');
+                    image.src = URL.createObjectURL(event.target.files[0]);
+                };
+                </script>
+       
+        <script> 
+            var login = new Vue({
+    el:"#Update_Profile",
+    data:{
+
+        message:"Print this message Please",
+        name:"Here Is The Link",
+        tlink:"www.google.com",
+        title1:"This Is Title"
+    }
+});
+        </script>
+
+
+        <!-- Footer Begins -->
+<footer>
+        <table   cellspacing='5' >
+                <tr>
+                <td bgcolor="green" width="1590px" height="50px" align="center"  > <font style="Times New Roman" size="6" color="white"> Developed By GCOEA </font> <br/>
+   
+                </td>
+                </tr>
+                </font>
+                </center>
+                </table>
+            </footer>
+<!-- Footer Ends Here -->
+
+    </body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile || Research and development Cell || Government College of Engineering, Amravati.</title>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Rakkas">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<h1 class="text-white text-center font-weight-bold bg-success" style="font-size: 60px;"> Profile </h1>
+
+	<div class="container"><br>
+		<div class="col-lg-10 m-auto d-block">
+			
+			<form action="#" onsubmit="return validation()" style="background-color: rgb(244, 246, 246);">
+				<div style="padding-top: 30px;"></div>
+
+                <div class="text-center bg-form">
+                    <div class="img-section">
+                        <img src="http://lorempixel.com/200/200/nature/" class="imgCircle" alt="Profile picture">
+                        <span class="fake-icon-edit" id="PicUpload" style="color: #ffffff;"><span class="glyphicon glyphicon-camera camera"></span></span>
+                    <div class="col-lg-12">
+                        <h4 class="text-right col-lg-12"><span class="glyphicon glyphicon-edit"></span></h4>
+                    </div>
+                    </div>
+                    <div class="col-lg-11 col-md-11 col-xs-11">
+                    <input type="file" id="image-input" onchange="readURL(this);" accept="image/*" class="form-control form-input Profile-input-file" >
+                </div>
+            </div>
+				
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="fi_name" class="font-weight-bold"> First Name: </label>
+					<input type="text" name="fname" class="form-control" id="f_name" autocomplete="off">
+					<span id="first_name" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="mi_name" class="font-weight-bold"> Middle Name: </label>
+					<input type="text" name="mname" class="form-control" id="m_name" autocomplete="off">
+					<span id="middle_name" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="la_name" class="font-weight-bold"> Last Name: </label>
+					<input type="text" name="lname" class="form-control" id="l_name" autocomplete="off">
+					<span id="last_name" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Gender:  </label>
+					<div class="radio">
+                    <label><input type="radio" name="Gender" value="Male" >Male</label>
+                     </div>
+                   <div class="radio">
+                        <label><input type="radio" name="Gender" value="Female">Female</label>
+                     </div>
+                     <div class="radio">
+                      <label><input type="radio" name="Gender" value="Other">Other</label>
+                       </div>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold">Department :</label>
+                    <select class="form-control" id="sel1" name="Department">
+                    <option value="Computer Science And Engineering">Computer Science And Engineering</option>
+    				<option value="Information Technology">Information Technology</option>
+    				<option value="Instrumentation Engineering">Instrumentation Engineering</option>
+    				<option value="Electronics And Telecommunication Technology">Electronics And Telecommunication Engineering</option>
+    				<option value="Electrical Engineering">Electrical Engineering</option>
+    				<option value="Civil Engineering">Civil Engineering</option>
+    				<option value="Mechanical Engineering">Mechanical Engineering</option>
+  					</select>
+				</div>
+					<span id="work" class="text-danger font-weight-bold"></span>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Designation: </label>
+					<input type="text" name="Designation" class="form-control" id="des" autocomplete="off">
+					<span id="designation" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Are you a recognized PhD?  </label>
+					<div class="radio">
+                    <label><input type="radio" name="recognized_phd" value="Recognized PhD">Yes</label>
+                     </div>
+                   <div class="radio">
+                        <label><input type="radio" name="recognized_phd" value="Not Recognized PhD" >No</label>
+                     </div>
+                     <div class="radio">
+                      <label><input type="radio" name="recognized_phd" value="Persuing PhD" >Persuing PhD</label>
+                       </div>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Residential Address: </label>
+					<textarea class="form-control" id="address" name="residential_address" rows="3" autocomplete="off"></textarea>
+					<span id="res_add" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold">Work Experience (in years) :</label>
+  <select class="form-control" id="sel1" name="work_experience">
+    <option value="Fresher">Fresher</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7"7</option>
+    <option value="8"8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="More than 10 years">More than 10</option>
+  </select>
+</div>
+					<span id="work" class="text-danger font-weight-bold"></span>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Mobile Number: </label>
+					<input type="text" name="mobile" class="form-control" id="mobileNumber" autocomplete="off">
+					<span id="mobileno" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Email: </label>
+					<input type="text" name="email" class="form-control" id="emails" autocomplete="off">
+					<span id="emailids" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Date Of Birth: </label>
+					<input type="date" name="dob" required>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Date Of Joining Institute: </label>
+					<input type="date" name="doj" required>
+				</div>
+
+<div class="text-center">
+				<div class="col-lg-12 col-md-12 text-center">
+                    <input type="submit" name="submit" class="btn btn-primary btn-lg custom-btn" >
+                </div>
+
+				<div class="form-group">
+					<label class="font-weight-bold text-danger">You can update your profile anytime</label>
+				</div>
+				<div style="padding-top: 40px;"></div>
+			</div>
+			</form>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--JAVASCRIPT-->
+	<script type="text/javascript">
+		
+
+		function validation(){
+
+			var f_name = document.getElementById('f_name').value;
+			var m_name = document.getElementById('m_name').value;
+			var l_name = document.getElementById('l_name').value;
+			var mobileNumber = document.getElementById('mobileNumber').value;
+			var emails = document.getElementById('emails').value;
+
+
+
+
+
+			if(f_name == ""){
+				document.getElementById('first_name').innerHTML =" ** Please fill the First name field";
+				return false;
+			}
+			if((f_name.length <= 2) || (f_name.length > 20)) {
+				document.getElementById('first_name').innerHTML =" ** lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(f_name)){
+				document.getElementById('first_name').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+			if(m_name == ""){
+				document.getElementById('middle_name').innerHTML =" ** Please fill the Middle name field";
+				return false;
+			}
+			if((m_name.length <= 2) || (m_name.length > 20)) {
+				document.getElementById('middle_name').innerHTML =" ** lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(m_name)){
+				document.getElementById('middle_name').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+			if(l_name == ""){
+				document.getElementById('last_name').innerHTML =" ** Please fill the First name field";
+				return false;
+			}
+			if((l_name.length <= 2) || (l_name.length > 20)) {
+				document.getElementById('last_name').innerHTML =" ** lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(l_name)){
+				document.getElementById('last_name').innerHTML =" ** only characters are allowed";
+				return false;
+			}
+
+
+			if(mobileNumber == ""){
+				document.getElementById('mobileno').innerHTML =" ** Please fill the mobile NUmber field";
+				return false;
+			}
+			if(isNaN(mobileNumber)){
+				document.getElementById('mobileno').innerHTML =" ** user must write digits only not characters";
+				return false;
+			}
+			if(mobileNumber.length!=10){
+				document.getElementById('mobileno').innerHTML =" ** Mobile Number must be 10 digits only";
+				return false;
+			}
+
+
+
+			if(emails == ""){
+				document.getElementById('emailids').innerHTML =" ** Please fill the email idx` field";
+				return false;
+			}
+			if(emails.indexOf('@') <= 0 ){
+				document.getElementById('emailids').innerHTML =" ** @ Invalid Position";
+				return false;
+			}
+
+			if((emails.charAt(emails.length-4)!='.') && (emails.charAt(emails.length-3)!='.')){
+				document.getElementById('emailids').innerHTML =" ** . Invalid Position";
+				return false;
+			}
+		}
+	</script>
+
+	<!--Profile Picture-->
+<script>
+	 function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                $('.imgCircle')
+                        .attr('src', e.target.result)
+                        .width(200)
+                        .height(200);
+            };
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+<!--JAVASCRIPT-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
+
+<!---PHP-->
+<?php 
+$fname = filter_input(INPUT_POST, 'fname');
+$mname = filter_input(INPUT_POST, 'mname');
+$lname = filter_input(INPUT_POST, 'lname');
+$address = filter_input(INPUT_POST, 'address');
+$Gender = filter_input(INPUT_POST, 'Gender');
+$Department = filter_input(INPUT_POST, 'Department');
+$dob = filter_input(INPUT_POST, 'dob');
+$Designation = filter_input(INPUT_POST, 'Designation');
+
+
+
+if(!empty($fname) && !empty($mname) && !empty($lname) && !empty($address) && !empty($Gender) && !empty($Department) && !empty($dob) && !empty($Designation)){
+
+		$host = "localhost";
+		$dbusername = "root";
+		$dbpassword = "";
+		$dbname = "test";
+
+		//connection
+		$conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
+
+		if (mysqli_connect_error()){
+			die('Connect Error ('.mysqli_connect_errno().') '.mysqli_connect_error());
+		}
+		else{
+			$sql = "INSERT INTO contact (fname, mname, lname, address, Gender, Department, dob, Designation) values ('$fname','$mname','$lname', '$address', '$Gender', '$Department', '$dob', '$Designation')";
+
+			if ($conn->query($sql)) {
+			echo '<span style="color:#FF0000;text-align:center;">Details Saved</span>';
+		}
+			else{
+				echo "Error: ".$sql ."<br>" .$conn->error;
+			}
+			$conn->close();
+		}
+}
+?>

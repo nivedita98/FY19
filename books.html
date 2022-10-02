@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Books | Research and development Cell | Government College of Engineering, Amravati.</title>
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+
+<body>
+<h1 class="text-white text-center font-weight-bold bg-success" style="font-size: 60px;"> Books </h1>
+
+	<div class="container"><br>
+		<div class="col-lg-10 m-auto d-block">
+			
+			<form action="books_php.php"  style="background-color: rgb(244, 246, 246);">
+				<div style="padding-top: 30px;"></div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="bk_title" class="font-weight-bold"> Book Title: </label>
+					<input type="text" name="booktitle" class="form-control" id="b_title" autocomplete="off">
+					<span id="book_title" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold">Department of Research Work:</label>
+                    <select class="form-control" id="sel1" name="department_of_book">
+                    <option value=" ">Select Department </option>
+                    <option value="Computer Science And Engineering">Computer Science And Engineering</option>
+    				<option value="Information Technology">Information Technology</option>
+    				<option value="Instrumentation Engineering">Instrumentation Engineering</option>
+    				<option value="Electronics And Telecommunication Engineering">Electronics And Telecommunication Engineering</option>
+    				<option value="Electrical Engineering<">Electrical Engineering</option>
+    				<option value="Civil Engineering">Civil Engineering</option>
+    				<option value="Mechanical Engineering">Mechanical Engineering</option>
+  					</select>
+				</div>
+					<span id="work" class="text-danger font-weight-bold"></span>
+
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="a_name" class="font-weight-bold"> Author Name: </label>
+					<input type="text" name="athname" class="form-control" id="athr_name" autocomplete="off">
+					<span id="author_name" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label for="coa_name" class="font-weight-bold"> Co-Author Name: </label>
+					<input type="text" name="coathname" class="form-control" id="co_name" autocomplete="off">
+					<span id="coauthor_name" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Book belongs to college of Engineering?  </label>
+					<div class="radio">
+                    <label><input type="radio" name="belonging" value="Yes">Yes</label>
+                     </div>
+                   <div class="radio">
+                        <label><input type="radio" name="belonging" value="No">No</label>
+                     </div>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold">Book Type:</label>
+                    <select class="form-control" id="sel1" name="Book_type" required>
+                    <option value=" ">Select Book Type </option>
+                    <option value="Monograph">Monograph</option>
+    				<option value="Technical Report">Technical Report</option>
+    				<option value="Other">Other</option>
+
+  					</select>
+				</div>
+					<span id="book" class="text-danger font-weight-bold"></span>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> ISBN Number: </label>
+					<input type="text" name="isbnnumber" class="form-control" id="isbn_no" autocomplete="off">
+					<span id="isbn_number" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Publisher's Name: </label>
+                    <input type="text" name="publication" class="form-control" id="des" autocomplete="off">
+					<span id="res_add" class="text-danger font-weight-bold"> </span>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Publication Date: </label>
+					<input type="date" name="publication_date" required>
+				</div>
+
+				<div class="form-group col-lg-11 col-md-11 col-xs-11">
+					<label class="font-weight-bold"> Number Of Pages: </label>
+					<input type="text" name="pages_no" class="form-control col-lg-2" id="mobileNumber" autocomplete="off">
+					<span id="mobileno" class="text-danger font-weight-bold"> </span>
+				</div>
+
+<div class="text-center">
+				<div class="col-lg-12 col-md-12 text-center">
+                    <input type="submit" name="submit" class="btn btn-primary btn-lg custom-btn" >
+                </div>
+                <div style="padding-top: 40px;"></div>
+            </div>
+				</form>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--JAVASCRIPT-->
+	<script type="text/javascript">
+		
+
+		function validation(){
+
+			var b_title = document.getElementById('b_title').value;
+			var athr_name = document.getElementById('athr_name').value;
+			var co_name = document.getElementById('co_name').value;
+			var isbn_no = document.getElementById('isbn_no').value;
+
+
+
+
+
+			if(b_title == ""){
+				document.getElementById('book_title').innerHTML =" **Please fill the Book Title field";
+				return false;
+			}
+			if((b_title.length <= 2) || (b_title.length > 30)) {
+				document.getElementById('book_title').innerHTML =" **Lenght must be between 2 and 30";
+				return false;	
+			}
+
+
+			if(athr_name == ""){
+				document.getElementById('author_name').innerHTML =" **Please fill the Author Name field";
+				return false;
+			}
+			if((athr_name.lenght <= 2) || (athr_name.length > 20)) {
+				document.getElementById('author_name').innerHTML =" **Lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(athr_name)){
+				document.getElementById('author_name').innerHTML =" **Only characters are allowed";
+				return false;
+			}
+
+
+			if(co_name == ""){
+				document.getElementById('coauthor_name').innerHTML =" **Please fill the CO-Author Name field";
+				return false;
+			}
+			if((co_name.length <= 2) || (co_name.length > 20)) {
+				document.getElementById('coauthor_name').innerHTML =" **Lenght must be between 2 and 20";
+				return false;	
+			}
+			if(!isNaN(co_name)){
+				document.getElementById('coauthor_name').innerHTML =" **Only characters are allowed";
+				return false;
+			}
+
+
+			if(isbn_no == ""){
+				document.getElementById('isbn_number').innerHTML ="**Please fill the ISBN Number field";
+				return false;
+			}
+			if(isNaN(isbn_no)){
+				document.getElementById('isbn_number').innerHTML ="**User must enter only digits";
+				return false;
+			}
+			if((isbn_no.length!=10) || (isbn_no.length!=13)){
+				document.getElementById('isbn_number').innerHTML ="**ISBN number must be 10 digits (till 2006) or 13 digits without spaces and "-" ";
+				return false;
+			}
+		}
+	</script>
+
+<!--JAVASCRIPT-->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

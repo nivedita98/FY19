@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title> Research Papers </title>
+        <script src="https://unpkg.com/vue@2.5.16/dist/vue.js"></script>
+                <style>
+                     .column {
+                     float: left;
+                     width:250px;
+                     font-family: 'Times New Roman', Times, serif;
+                     font-size: 20px;
+                    }
+
+                    .column2 {
+                     float: left;
+                     width:150px;
+                     font-family: 'Times New Roman', Times, serif;
+                     font-size: 20px;
+                     align
+                     }
+
+                    .row {
+                        content: "";
+                        display: table;
+                        clear: both;
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size: 20px;
+                        width: 500px;
+                    }
+
+                    .header, .footer {
+                        width: 100%;
+                        position: fixed;        
+                        background: #333;
+                        padding: 10px;
+                        color:green;
+                    }
+
+                    header {
+                        top: 0;
+                    }
+
+                    footer {
+                        bottom: 0;
+                    }
+
+                    .text {
+                        font-family: 'Times New Roman', Times, serif;
+                        font-size: 20px;
+                        text-align: left;
+                    }
+
+                    .publication_title {
+                        font-family: Georgia, 'Times New Roman', Times, serif;
+                        color: midnightblue;
+                        font-size: 25px;
+                        text-align: left;
+                    }
+
+                    .bdy {
+                        background-image:url(http://getwallpapers.com/wallpaper/full/1/d/a/165821.jpg)
+                    }
+
+                </style>
+    </head>
+
+    <body >
+        <!-- Header Begins -->
+        <header>
+                <table   cellspacing='5' >
+                            <tr>
+                            <td> <img src="F:\FY19 Project\Photos\logo.gif" height="120px" width="120px">  </td>
+                            <td bgcolor="green" width="100%" height="" align="center"  > <font style="Times New Roman" size="6" color="white"> Government College Of Engineering, Amravati </font> <br/>
+                                <font style="Times New Roman" size="5" color="white"> Near kathora square, Amravati - 444604 </font><br/>
+                                <font style="Times New Roman" size="4" color="white">  (An Autonomous Institute Of Government Of Maharashtra) </font> <br/>  </td>
+                            </tr>
+                            </table>
+                        </header>
+        <!-- Header Ends Here -->
+        <div style="padding-top: 50px"></div>
+
+        <div id="paper">
+                <center> <div style="width:800px;height: auto;border:2px solid #000;backface-visibility: visible; background-color:cornsilk"> 
+                     <p align="center"> <font style="Times New Roman" size="6" color="brown"> <b> Update Publications </b> </font> </p>
+                     <hr style="border:1.2px solid black">
+
+
+        
+        <!-- Research papers begin -->
+        <div class="publication_title">
+                <ul>
+                <li>Research Paper</li>
+            </ul>
+        </div>
+
+
+        <div class="row">
+                <div class="column">
+                <label class="text" ><div align="left"> Enter Research Paper Title: </div></label>
+             </div>
+             <div class="column2">
+                 <input type="text" name="title" placeholder="Enter Title Of Research Paper" style="width:300px;">
+             </div>
+             </div>
+
+
+             <div class="row">
+                    <div class="column">
+                    <label class="text" ><div align="left"> Enter Author Name: </div></label>
+                 </div>
+                 <div class="column2">
+                     <input type="text" name="author" placeholder="Name Of Author" style="width:300px;">
+                 </div>
+                 </div>
+
+
+                 <div class="row">
+                        <div class="column">
+                        <label class="text" ><div align="left"> Enter Year of Publishing: </div></label>
+                     </div>
+                     <div class="column2">
+                         <input type="date">
+                     </div>
+                     </div>
+
+
+                     <div class="row">
+                            <div class="column">
+                            <label class="text" ><div align="left"> Author Status </div></label>
+                         </div>
+                         <div class="column2">
+                             <div align="left">
+                             <select>
+                                 <option>Author Status</option>
+                                 <option>PhD</option>
+                                 <option>Non-PhD</option>
+                             </select>
+                            </div>
+                         </div>
+                         </div>
+
+                         <div style="padding: 5px"></div>
+
+                         <div class="row">
+                                <div class="column1">
+                                    <button type="button" name="Add New" value="add"> Add New </button> 
+                                </div>
+                            </div>
+        
+        <!-- Research Paper end -->
+        </div>
+            </center>
+        </div>
+        <div style="padding-bottom: 100px"></div>
+
+        <!-- Footer Begins -->
+<footer>
+        <table   cellspacing='5' >
+                <tr>
+                <td bgcolor="green" width="1590px" height="50px" align="center"  > <font style="Times New Roman" size="6" color="white"> Developed By GCOEA </font> <br/>
+   
+                </td>
+                </tr>
+                </font>
+                </center>
+                </table>
+            </footer>
+<!-- Footer Ends Here -->
+    </body>
+</html>
